@@ -1,0 +1,261 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #c8b0df;
+  color: #111;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  width: 370px;
+  min-height: 900px;
+  margin: 30px auto;
+  padding: 20px 12px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.app h1 {
+  text-align: center;
+  font-size: 24px;
+  margin: 5px 0 20px;
+}
+
+/* =========================
+   SUMMARY
+========================= */
+
+.summary-section {
+  border: 5px solid #31a957;
+  padding: 8px;
+  margin-bottom: 16px;
+}
+
+.balance {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.small-title {
+  margin: 5px 0 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.balance h2 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: normal;
+}
+
+.balance h3 {
+  color: #d52f39;
+  font-size: 18px;
+}
+
+.summary-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 12px 5px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.summary-item {
+  flex: 1;
+  text-align: center;
+}
+
+.summary-item h4 {
+  margin: 0 0 5px;
+  font-size: 14px;
+}
+
+.summary-item p {
+  margin: 0;
+  font-size: 23px;
+}
+
+.income {
+  color: #69c879;
+}
+
+.expense {
+  color: #e45d62;
+}
+
+.divider {
+  width: 1px;
+  height: 45px;
+  background: #ddd;
+}
+
+/* =========================
+   HISTORY
+========================= */
+
+.history-section {
+  border: 5px solid #d92836;
+  padding: 8px;
+  margin-bottom: 16px;
+}
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #ddd;
+}
+
+.section-title h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.section-title h3 {
+  color: #d52f39;
+  margin: 0 0 10px;
+  font-size: 17px;
+}
+
+.transaction-list {
+  margin-top: 15px;
+}
+
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+  margin-bottom: 12px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  border-right: 6px solid;
+}
+
+.transaction-income {
+  border-right-color: #59cf71;
+}
+
+.transaction-expense {
+  border-right-color: #ed5a61;
+}
+
+.transaction-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.delete-button {
+  display: none;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: #e74c3c;
+  color: #fff;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.transaction:hover .delete-button {
+  display: block;
+}
+
+/* =========================
+   ADD TRANSACTION
+========================= */
+
+.add-section {
+  border: 5px solid #fff000;
+  padding: 8px;
+}
+
+.add-section form {
+  margin-top: 12px;
+}
+
+.add-section form > label {
+  display: block;
+  margin: 10px 0 6px;
+  font-size: 16px;
+}
+
+.add-section input[type="text"],
+.add-section input[type="number"] {
+  width: 100%;
+  padding: 9px;
+  border: 1px solid #d7cfe0;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.add-section input[type="text"]:focus,
+.add-section input[type="number"]:focus {
+  border-color: #935ac5;
+}
+
+.radio-group {
+  margin: 15px 0;
+}
+
+.radio-group label {
+  display: block;
+  margin: 12px 0;
+  font-size: 16px;
+}
+
+.radio-group input {
+  margin-right: 12px;
+}
+
+.add-button {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  background: #935ac5;
+  color: #fff;
+  font-size: 16px;
+}
+
+.add-button:hover {
+  background: #7f48b0;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 450px) {
+  .app {
+    width: calc(100% - 30px);
+    margin: 15px auto;
+  }
+}
